@@ -1,10 +1,12 @@
-//form version 1.0.0
+//form version 1.0.1
+
+//-------------------------------------MASTER COPY--------------------------------------------
 
 /*Update notes
  * 
  * 
- * 
- * 
+ * Changed YN()
+ * got rid of .toLowerCaseand changed the .equals to .equalsIgnoreCase
  * 
  */
 
@@ -36,10 +38,9 @@ public class form{
       String YN = "x";
       while(YesNo){//allows user to comfirm their value
          System.out.println("Comfirm Selection? (Y/N)");
-         YN = input.nextLine();
-         YN = YN.toLowerCase();
+         
       
-         if (!(YN.equals ("y"))&&!(YN.equals ("n"))){//if the user does not input a valid option
+         if (!(YN.equalsIgnoreCase("y"))&&!(YN.equalsIgnoreCase("n"))){//if the user does not input a valid option
             YesNo = true;
          }
          else{
